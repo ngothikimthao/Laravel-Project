@@ -14,11 +14,11 @@ class CreatePostProductTable extends Migration
     public function up()
     {
         Schema::create('post_product', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('id_post')->unsigned();
-            $table->foreign('id_post')->references('id')->on('posts');
+            $table->Biginteger('id_post')->unsigned();
             $table->integer('id_prod')->unsigned();
+            $table->primary(array('id_post','id_prod'));
             $table->foreign('id_prod')->references('id')->on('products');
+            $table->foreign('id_post')->references('id')->on('posts');
             $table->timestamps();
         });
     }
