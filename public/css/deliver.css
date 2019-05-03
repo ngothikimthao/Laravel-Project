@@ -1,0 +1,44 @@
+.item {
+  display: list-item;
+  table-layout: fixed;
+  list-style-type: none;
+  list-style-position: outside;
+  padding: 1em 0 1em 2em;
+  line-height: 1.14285714em;
+  position: relative;
+}
+
+.item:before {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  margin-top: -8px;
+  content: '';
+  border-radius: 100%;
+  background: #00B5AD;
+}
+
+.item:after {
+  position: absolute;
+  top: 0;
+  left: 11px;
+  width: 0px;
+  height: 100%;
+  content: '';
+  border-right: 1px dotted #00B5AD;
+}
+
+.item:first-child:after {
+  top: 50%;
+  height: 50%;
+  margin-top: -1px;
+}
+
+.item:last-child:after {
+  position: absolute;
+  bottom: 50%;
+  height: 50%;
+  margin-top: -1px;
+}

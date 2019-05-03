@@ -11,6 +11,28 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('trangchu', [
+	'as' 	=> 'getTrangchu',
+	'uses' 	=> 'logincontroller@getTrangchu'
+]);
+
+Route::get('login', [
+	'as' 	=> 'getLogin',
+	'uses' 	=> 'logincontroller@getLogin'
+]);
+
+Route::get('post', [
+	'as' 	=> 'getPost',
+	'uses' 	=> 'logincontroller@getPost'
+]);
+
+
+Route::get('prodetail', [
+	'as' 	=> 'prodetail',
+	'uses' 	=> 'ProductController@proDetail'
+]);
