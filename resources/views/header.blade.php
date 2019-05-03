@@ -20,70 +20,71 @@
 
 <body>
 <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
-        <!-- Navbar Area -->
-        <div class="mag-main-menu" id="sticker">
-            <div class="classy-nav-container breakpoint-off">
-                <!-- Menu -->
-                <nav class="classy-navbar justify-content-between" id="magNav">
+<header class="header-area">
+    <!-- Navbar Area -->
+  <div class="mag-main-menu" id="sticker">
+    <div class="classy-nav-container breakpoint-off">
+        <!-- Menu -->
+      <nav class="classy-navbar justify-content-between" id="magNav">
 
-                    <!-- Nav brand -->
-                    <a href="{{route('getTrangchu')}}" class="nav-brand"><img src="img/user/logo.png" alt=""></a>
+          <!-- Nav brand -->
+        <a href="{{route('getTrangchu')}}" class="nav-brand"><img src="img/user/logo.png" alt=""></a>
 
-                    <!-- Navbar Toggler -->
-                    <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
-                    </div>
-
-                    <!-- Nav Content -->
-                    <div class="nav-content d-flex align-items-center">
-                        <div class="classy-menu">
-
-                            <!-- Close Button -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-                            <!-- Nav Start -->
-                            <div class="classynav">
-                                <ul>
-                                    <li class="active"><a href="{{route('getTrangchu')}}">Trang Chủ</a></li>
-                                    <li><a href="#">Đổi Đồ</a>
-                                        <ul class="dropdown">
-                                            <li><a href="index.html">Học Sinh</a></li>
-                                            
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Câu Lạc bộ</a>
-                                        <div class="megamenu">
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="index.html">Trang Chủ</a></li>
-                                                <li><a href="archive.html">Đổi Đồ</a></li>
-                                                <li><a href="video-post.html">Chúng Tôi</a></li>
-                                                <li><a href="single-post.html">Đăng Xuất</a></li>
-                                            </ul>
-                                            
-                                    </li>
-                                    <li><a href="about.html">Chúng Tôi</a></li>
-                                </ul>
-                            </div>
-                            <!-- Nav End -->
-                        </div>
-
-                        <div class="top-meta-data d-flex align-items-center">
-                            <!-- Top Search Area -->
-                            <div class="top-search-area">
-                                <form action="index.html" method="post">
-                                    <input type="search" name="top-search" id="topSearch" placeholder="Gõ tìm kiếm...">
-                                    <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </form>
-                            </div>
-                            <!-- Login -->
-                            <a href="{{route('getLogin')}}" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
-                            <!-- Submit Video -->
-                            <a href="{{route('getPost')}}" class="submit-video"><span><i class="fa fa-cloud-upload"></i></span> <span class="video-text">Đăng Bài</span></a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
+          <!-- Navbar Toggler -->
+        <div class="classy-navbar-toggler">
+          <span class="navbarToggler"><span></span><span></span><span></span></span>
         </div>
-    </header>
+
+          <!-- Nav Content -->
+        <div class="nav-content d-flex align-items-center">
+          <div class="classy-menu">
+
+              <!-- Close Button -->
+            <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+            </div>
+              <!-- Nav Start -->
+            <div class="classynav">
+                <ul>
+                    <li class="active"><a href="{{route('getTrangchu')}}">Trang Chủ</a></li>
+                    <li><a href="#">Đổi Đồ</a>
+                        <ul class="dropdown">
+                            @foreach($loai_sp as $loai)
+                              <li><a href="{{ route('danhmuc',$loai->id)}}" title="">{{$loai->name}}</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
+                    <li><a href="#">Câu Lạc bộ</a>
+                        <div class="megamenu">
+                            <ul class="single-mega cn-col-4">
+                                <li><a href="index.html">Trang Chủ</a></li>
+                                <li><a href="archive.html">Đổi Đồ</a></li>
+                                <li><a href="video-post.html">Chúng Tôi</a></li>
+                                <li><a href="single-post.html">Đăng Xuất</a></li>
+                            </ul>
+                            
+                    </li>
+                    <li><a href="about.html">Chúng Tôi</a></li>
+                </ul>
+            </div>
+              <!-- Nav End -->
+          </div>
+
+          <div class="top-meta-data d-flex align-items-center">
+              <!-- Top Search Area -->
+            <div class="top-search-area">
+                <form action="index.html" method="post">
+                    <input type="search" name="top-search" id="topSearch" placeholder="Gõ tìm kiếm...">
+                    <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+              <!-- Login -->
+            <a href="{{route('getLogin')}}" class="login-btn"><i class="fa fa-user" aria-hidden="true"></i></a>
+            <!-- Submit Video -->
+            <a href="{{route('getPost')}}" class="submit-video"><span><i class="fa fa-cloud-upload"></i></span> <span class="video-text">Đăng Bài</span></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

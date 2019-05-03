@@ -36,3 +36,8 @@ Route::get('prodetail', [
 	'as' 	=> 'prodetail',
 	'uses' 	=> 'ProductController@proDetail'
 ]);
+
+Route::get('danhmuc/{type}', [
+	'as' 	=> 'danhmuc',
+	'uses' 	=> 'ProductController@getCategories'
+]);
