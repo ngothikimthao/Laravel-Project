@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostProducTable extends Migration
+class CreatePostProductTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CreatePostProducTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_produc', function (Blueprint $table) {
+        Schema::create('post_product', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->biginteger('id_post')->unsigned();
+            $table->foreign('id_post')->references('id')->on('posts');
+            $table->biginteger('id_prod')->unsigned();
+            $table->foreign('id_prod')->references('id')->on('products');
             $table->timestamps();
         });
     }
@@ -26,6 +30,7 @@ class CreatePostProducTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_produc');
+        Schema::dropIfExists('post_product');
     }
 }
+
