@@ -1,4 +1,4 @@
- @include('header')
+ @include('Page.header')
 
     <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(img/user/1.jpg);">
         <div class="container h-100">
@@ -44,5 +44,5 @@
             </div>
         </div>
     </div>
-@include('footer')
-@include('script')
+@include('Page.footer')
+@include('Page.script')

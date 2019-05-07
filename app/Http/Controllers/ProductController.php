@@ -12,12 +12,17 @@ class ProductController extends Controller
     	return view('productdetail');
     }
 
+    public function getTrangDanhMuc()
+    {
+    	return view('pageCate');
+    }
+
     public function getCategories($type)
     {
     	$sp_theoloai= Product::where('id_cat',$type) ->limit(3)->get();
         $loai = Category::all();
         $loai_sp = Category::where('id',$type)->first();
-        return view('header',compact('sp_theoloai','loai','loai_sp'));
+        return view('trangdanhmuc',compact('sp_theoloai','loai','loai_sp'));
     }
 
 }

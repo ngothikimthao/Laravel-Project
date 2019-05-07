@@ -1,4 +1,4 @@
-@include('header')
+@include('Page.header')
 <body>
     <!-- Preloader -->
 
@@ -40,15 +40,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="upload-file">Nội dung</label>
-                                    <textarea name="video-description" class="form-control" cols="30" rows="10"></textarea>
+                                    <textarea name="" class="form-control" cols="30" rows="10"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="upload-file">Thể loại</label>
                                     <select name="video-catagory" class="form-control">
-                                        <option value="blogs">Học sinh</option>
-                                        <option value="news">Gia dụng</option>
-                                        <option value="lifestyle">Áo quần</option>
-                                        <option value="treading">Thể thao</option>
+                                        <option value="">Học sinh</option>
+                                        <option value="">Gia dụng</option>
+                                        <option value="">Áo quần</option>
+                                        <option value="">Thể thao</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -57,6 +57,14 @@
                                         <option value="en">Mới</option>
                                         <option value="spa">Cũ</option>
                                     </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="upload-file"> Loại đồ bạn muốn</label>
+                                    <br>
+                                    <input type="checkbox" name="doi" value="Do"> Học sinh <br>
+                                    <input type="checkbox" name="doi" value="Do"> Gia dụng<br>
+                                    <input type="checkbox" name="doi" value="Do"> Áo quần<br>
+                                    <input type="checkbox" name="doi" value="Do"> Thể thao<br>
                                 </div>
                                 <button type="submit" class="btn mag-btn mt-30"><i class="fa fa-cloud-upload"></i> Đăng bài</button>
                             </form>
@@ -68,5 +76,5 @@
     </div>
 </body>
 
-@include('footer')
-@include('script')
+@include('Page.footer')
+@include('Page.script')

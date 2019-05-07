@@ -1,4 +1,4 @@
-@include('header')
+@include('Page.header')
     <body>
         <div class="container-fluid">
           <div class="row">
@@ -94,5 +94,5 @@
             
     </body>
 
-@include('footer')
-@include('script')
+@include('Page.footer')
+@include('Page.script')

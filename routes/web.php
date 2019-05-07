@@ -41,3 +41,9 @@ Route::get('danhmuc/{type}', [
 	'as' 	=> 'danhmuc',
 	'uses' 	=> 'ProductController@getCategories'
 ]);
+
+
+Route::get('pageCate', [
+	'as' 	=> 'getTrangDanhMuc',
+	'uses' 	=> 'ProductController@getTrangDanhMuc'
+]);

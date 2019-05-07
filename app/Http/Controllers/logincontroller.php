@@ -7,17 +7,17 @@ use Illuminate\Http\Request;
 class logincontroller extends Controller
 {
     public function getTrangchu(){
-    	return view('index');
+    	return view('Page.index');
     }
 
     public function getLogin()
     {
-        return view('login');
+        return view('Customer.login');
     }
 
     public function getPost()
     {
-        return view('post');
+        return view('Customer.post');
     }
 
 }
