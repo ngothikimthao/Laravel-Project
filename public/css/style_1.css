@@ -1,0 +1,71 @@
+#mainnavq{
+  padding: 10px;
+  margin: 10px;
+}
+#mainnavq ul{
+  background: #589dd6;
+  list-style: none;
+  padding: 0px;
+  width: 200px;
+  text-align: left;
+}
+#mainnavq ul li{
+  position: relative;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #fff;
+}
+#mainnavq ul .thefirst{
+  background: #589dd6;
+}
+#mainnavq ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 16px;
+  display: block;
+}
+#mainnavq li:hover{
+  background: #232323;
+}
+#mainnavq .sub-menu{
+  position: absolute;
+  left: 200px;
+  top: 0px;
+  width: 200px;
+  display: none;
+  text-align: left;
+  border-left: 1px solid #fff;
+  font-size: 90%;
+  border-radius: 0px 10px 10px 0px;
+}
+#mainnavq li:hover .sub-menu{
+  display: block;
+  background: #589dd6;
+  color: red;
+}
+#mainnavq .sub-menu2{
+  position: absolute;
+  left: 200px;
+  top: 0;
+  width: 200px;
+  border-left: 1px solid #fff;
+  border-radius: 0px 10px 10px 0px;
+  display: none;
+}
+#mainnavq .sub-menu li:hover .sub-menu2{
+  display: block;
+}
+#mainnavq .sub-menu3{
+  position: absolute;
+  left: 200px;
+  top: 0;
+  width: 200px;
+  border-left: 1px solid #fff;
+  border-radius: 0px 10px 10px 0px;
+  display: none;
+}
+#mainnavq .sub-menu2 li:hover .sub-menu3{
+  display: block;
+}

@@ -12,6 +12,7 @@
     <link href="{{asset('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{asset('css/style.css') }}" rel="stylesheet">
     <link href="{{asset('css/style_q.css') }}" rel="stylesheet">
+    <link href="{{asset('css/style_1.css') }}" rel="stylesheet">
     <link href="{{asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{asset('css/classy-nav.css') }}" rel="stylesheet">
     <link href="{{asset('css/icon.css') }}" rel="stylesheet">
