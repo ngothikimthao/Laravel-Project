@@ -1,20 +1,29 @@
 @include('Page.header')
-<div class="container-fluid">
-	<nav>
+<nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     @foreach($loai_sp as $loai)
-    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="{{ route('danhmuc',$loai->id)}}" role="tab" aria-controls="nav-home" aria-selected="true">{{$loai->name}}</a>
+    @if($loai->id == 1)
+    <a class="nav-item nav-link active"  data-toggle="tab" href="#nav-{{$loai->id}}" role="tab" aria-selected="true">{{$loai->name}}</a>
+    @else
+    <a class="nav-item nav-link" data-toggle="tab" href="#nav-{{$loai->id}}" role="tab" aria-selected="false">{{$loai->name}}</a>
+    @endif	
     @endforeach
   </div>
-</nav>
+
 <div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
-</div>
+	@foreach($loai_sp as $loai)
+	@if($loai->id == 1)
+  <div class="tab-pane fade show active" id="nav-{{$loai->id}}" role="tabpanel" >{{$loai->name}}</div>
+   @else
+    <div class="tab-pane fade" id="nav-{{$loai->id}}" role="tabpanel">{{$loai->name}}</div>
+    @endif	
+  @endforeach
+</div> 
 
 
-</div>
+</div> 
+
+
 
 @include('Page.footer')
 @include('Page.script')
