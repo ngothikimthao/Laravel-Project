@@ -14,7 +14,7 @@ class ProductController extends Controller
 
     public function getTrangDanhMuc()
     {
-    	return view('pageCate');
+    	return view('Customer.pageCate');
     }
 
     public function getCategories($type)
@@ -22,7 +22,7 @@ class ProductController extends Controller
     	$sp_theoloai= Product::where('id_cat',$type) ->limit(3)->get();
         $loai = Category::all();
         $loai_sp = Category::where('id',$type)->first();
-        return view('trangdanhmuc',compact('sp_theoloai','loai','loai_sp'));
+        return view('Page.header','Customer.pageCate',compact('sp_theoloai','loai','loai_sp'));
     }
 
 }

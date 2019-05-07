@@ -1,4 +1,4 @@
- @include('Page.header')
+@include('Page.header')
 <div class="container-fluid">
 	<nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">

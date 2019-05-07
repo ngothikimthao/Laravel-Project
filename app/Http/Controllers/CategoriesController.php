@@ -6,8 +6,5 @@ use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
-    public function getTrangDanhMuc()
-    {
-    	return view('trangdanhmuc');
-    }
+    
 }

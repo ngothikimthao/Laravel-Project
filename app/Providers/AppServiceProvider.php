@@ -30,6 +30,10 @@ class AppServiceProvider extends ServiceProvider
           $loai_sp = Category::all();
           $view->with('loai_sp',$loai_sp);
         });
+       view()->composer('Customer.pageCate',function($view){
+          $loai_sp = Category::all();
+          $view->with('loai_sp',$loai_sp);
+        });
         
     }
 }
