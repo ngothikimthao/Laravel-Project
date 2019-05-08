@@ -13,11 +13,12 @@ class CategoriesTableSeeder extends Seeder
     {
         DB::table('Categories')->insert([
         	['name' => 'Đồ điện tử'],
+            ['name' => 'Sách báo'],
+            ['name' => 'Văn phòng phẩm'],
             ['name' => 'Đồ gia dụng'],
-            ['name' => 'Đồ dùng học sinh'],
-            ['name' => 'Thời trang'],
             ['name' => 'Thể thao'],
-        	['name' => 'Phụ kiện']
+            ['name' => 'Thời trang'],
+            ['name' => 'Khác'],
         ]);
     }
 }

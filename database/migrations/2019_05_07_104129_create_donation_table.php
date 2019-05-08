@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCommentsTable extends Migration
+class CreateDonationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('donation', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_user')->unsigned();
+            $table->Biginteger('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users');
+            $table->Biginteger('id_prod')->unsigned();
+            $table->foreign('id_prod')->references('id')->on('products');
+            $table->Biginteger('id_club')->unsigned();
+            $table->foreign('id_club')->references('id')->on('clubs');
             $table->String('content');
             $table->timestamps();
         });
@@ -29,6 +33,6 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('donation');
     }
 }

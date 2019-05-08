@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -14,10 +15,11 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->BigIncrements('id');
             $table->String('name',400);
-            $table->biginteger('id_cat')->unsigned();
-            $table->foreign('id_cat')->references('id')->on('categories');
+            $table->biginteger('id_subcat')->unsigned();
+            $table->foreign('id_subcat')->references('id')->on('sub_categories');
+            $table->double('price');
             $table->String('image');
             $table->String('description');
             $table->integer('status');
